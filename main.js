@@ -6,11 +6,11 @@ function checkWord(word1, word2) {
   for (let i = 0; i < word1.length; i++) {
 
     if (word1[i] === word2[i]) {
-        result.push({ letter: word1[i], result: "rätt bokstav och rätt plats" });
+        result.push({ letter: word1[i], result: "correct" });
     } else if (word2.includes(word1[i])) {
-        result.push({ letter: word1[i], result: "rätt bokstav men fel plats" });
+        result.push({ letter: word1[i], result: "misplaced" });
     } else {
-        result.push({ letter: word1[i], result: "finns ej"});
+        result.push({ letter: word1[i], result: "incorrect"});
     }
     
   }
