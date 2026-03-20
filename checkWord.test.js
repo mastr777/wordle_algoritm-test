@@ -2,7 +2,7 @@
 // Test 1 - Correct letters
 //
 // Testet visar att funktionen returnerar "correct" när alla 
-// bokstäver i gissningen är identiska med det korrekta ordet.
+// bokstäver i gissningen är identiska med det korrekta ordet
 //
 // Om spelaren gissar rätt ord direkt, ska alla resultat bli "correct"
 
@@ -46,6 +46,30 @@ test("a letter exists but is misplaced", () => {
         { letter: "C", result: "incorrect" },
         { letter: "D", result: "incorrect" }
     ]);
+});
+
+
+
+// Test 3 - Duplicate letters
+// Test 3 verifierar att funktionen hanterar dubbla bokstäver på korrekt sätt
+//
+// Endast det antal bokstäver som finns i det korrekta ordet ska markeras 
+// som "correct", eller "misplaced". De andra bokstäverna ska bli "incorrect"
+
+
+test("handles duplicate letters correctly", () => {
+    const result = checkWord("HALLÅ", "CYKLA");
+
+  expect(result).toEqual([
+
+    { letter: "H", result: "incorrect" },
+    { letter: "A", result: "misplaced" },
+    { letter: "L", result: "incorrect" },
+    { letter: "L", result: "correct" },
+    { letter: "Å", result: "incorrect" }
+
+  ]);
+
 });
 
 
