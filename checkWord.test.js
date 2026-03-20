@@ -74,5 +74,33 @@ test("handles duplicate letters correctly", () => {
 
 
 
+// Test 4 - No letters are present
+// Det här testet verifierar att funktionen returnerar "incorrect" för alla bokstäver
+// när inga bokstäver från gissningsordet finns med i det korrekta ordet
+//
+// när spelaren gissar med ett ord där ingen av bokstäverna finns med i det korrekta ordet
+
+test("no letters present in the correct word", () => {
+
+    const result = checkWord("HIEROGLYF", "ANANAS");
+
+  expect(result).toEqual([
+
+    { letter: "H", result: "incorrect" },
+    { letter: "I", result: "incorrect" },
+    { letter: "E", result: "incorrect" },
+    { letter: "R", result: "incorrect" },
+    { letter: "O", result: "incorrect" },
+    { letter: "G", result: "incorrect" },
+    { letter: "L", result: "incorrect" },
+    { letter: "Y", result: "incorrect" },
+    { letter: "F", result: "incorrect" }
+
+  ]);
+
+});
+
+
+
 
 
