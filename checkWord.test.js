@@ -1,5 +1,5 @@
 
-// Test 1
+// Test 1 - Correct letters
 //
 // Testet visar att funktionen returnerar "correct" när alla 
 // bokstäver i gissningen är identiska med det korrekta ordet.
@@ -12,6 +12,7 @@ const checkWord = require("./checkWord");
 
 test("all letters are correct", () => {
 
+    // ord 1, korrekt ord - ord 2, gissat ord
   const result = checkWord("CYKLA", "CYKLA");
 
   expect(result).toEqual([
@@ -28,7 +29,25 @@ test("all letters are correct", () => {
 
 
 
-// 
+// Test 2 - Misplaced letter
+//
+// Testet verifierar att funktionen returnerar "misplaced" när en
+// bokstav finns i ordet, men på fel platrs
+
+
+test("a letter exists but is misplaced", () => {
+
+    const result = checkWord("ABCD", "XYZA");
+
+    expect(result).toEqual([
+
+        { letter: "A", result: "misplaced" },
+        { letter: "B", result: "incorrect" },
+        { letter: "C", result: "incorrect" },
+        { letter: "D", result: "incorrect" }
+    ]);
+});
+
 
 
 
