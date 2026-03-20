@@ -1,4 +1,19 @@
 
+// Strategi:
+// Tester skapas för att täcka de viktigaste utfallen i algoritmen
+//
+// Alla bokstäver korrekta ("correct")
+// Bokstäver som finns men på fel plats ("misplaced")
+// Bokstäver som inte finns i ordet ("incorrect")
+// Hantering av dubbla bokstäver
+//
+// Dessa tester verifierar att funktionen fungerar korrekt, enligt
+// spelets regler
+
+
+// TEST ----------------------------- v
+
+
 // Test 1 - Correct letters
 //
 // Testet visar att funktionen returnerar "correct" när alla 
