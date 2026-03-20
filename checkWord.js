@@ -37,7 +37,7 @@ function checkWord(word1, word2) {
   return result;
 }
 
-
+module.exports = checkWord;
 
 
 
